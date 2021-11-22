@@ -1,0 +1,370 @@
+{
+  "components": [
+    {
+      "label": "<strong>Start opbouw</strong>",
+      "useLocaleSettings": true,
+      "format": "dd-MM-yyyy HH:mm",
+      "tableView": false,
+      "enableMinDateInput": false,
+      "datePicker": {
+        "minDate": "moment(\"2022-01-01\")",
+        "disableWeekends": false,
+        "disableWeekdays": false
+      },
+      "enableMaxDateInput": false,
+      "timePicker": {
+        "showMeridian": false
+      },
+      "defaultValue": "2022-01-02T12:00:00+01:00",
+      "validate": {
+        "required": true,
+        "customMessage": "Dit veld is verplicht."
+      },
+      "key": "evenementaanvraag.evenementDatum.opbouw.start",
+      "logic": [
+        {
+          "name": "Altijd true",
+          "trigger": {
+            "type": "javascript",
+            "javascript": "result = true;"
+          },
+          "actions": [
+            {
+              "name": "Check of de default value gelijk is aan de huidige value van het component.",
+              "type": "customAction",
+              "customAction": "const defaultValue = instance.defaultValue;\nconst currentValue = instance.dataValue;\n\nif (defaultValue !== currentValue) {\n  data.evenementaanvraag.evenementWijzigingDatumOfLocatie.opbouw = true;\n} else {\n  data.evenementaanvraag.evenementWijzigingDatumOfLocatie.opbouw = false;\n}\n"
+            }
+          ]
+        }
+      ],
+      "type": "datetime",
+      "input": true,
+      "widget": {
+        "type": "calendar",
+        "displayInTimezone": "viewer",
+        "locale": "en",
+        "useLocaleSettings": true,
+        "allowInput": true,
+        "mode": "single",
+        "enableTime": true,
+        "noCalendar": false,
+        "format": "dd-MM-yyyy HH:mm",
+        "hourIncrement": 1,
+        "minuteIncrement": 1,
+        "time_24hr": true,
+        "minDate": "moment(\"2022-01-01\")",
+        "disableWeekends": false,
+        "disableWeekdays": false,
+        "maxDate": null
+      }
+    },
+    {
+      "label": "HTML",
+      "tag": "span",
+      "attrs": [
+        {
+          "attr": "",
+          "value": ""
+        }
+      ],
+      "content": "<strong>Evenement</strong>",
+      "refreshOnChange": false,
+      "key": "html",
+      "type": "htmlelement",
+      "input": false,
+      "tableView": false
+    },
+    {
+      "label": "Startdatum en tijd",
+      "useLocaleSettings": true,
+      "format": "dd-MM-yyyy HH:mm",
+      "tableView": false,
+      "enableMinDateInput": false,
+      "datePicker": {
+        "minDate": "moment(\"2022-01-01\")",
+        "disableWeekends": false,
+        "disableWeekdays": false
+      },
+      "enableMaxDateInput": false,
+      "timePicker": {
+        "showMeridian": false
+      },
+      "defaultValue": "2022-01-03T12:00:00+01:00",
+      "validate": {
+        "required": true,
+        "customMessage": "Dit veld is verplicht."
+      },
+      "key": "evenementaanvraag.evenementDatum.uitvoer.start",
+      "logic": [
+        {
+          "name": "Altijd true",
+          "trigger": {
+            "type": "javascript",
+            "javascript": "result = true;"
+          },
+          "actions": [
+            {
+              "name": "Check of de default value gelijk is aan de huidige value van het component.",
+              "type": "customAction",
+              "customAction": "const defaultValue = instance.defaultValue;\nconst currentValue = instance.dataValue;\n\nif (defaultValue !== currentValue) {\n  data.evenementaanvraag.evenementWijzigingDatumOfLocatie.uitvoerStart = true;\n} else {\n  data.evenementaanvraag.evenementWijzigingDatumOfLocatie.uitvoerStart = false;\n}\n"
+            }
+          ]
+        }
+      ],
+      "type": "datetime",
+      "input": true,
+      "widget": {
+        "type": "calendar",
+        "displayInTimezone": "viewer",
+        "locale": "en",
+        "useLocaleSettings": true,
+        "allowInput": true,
+        "mode": "single",
+        "enableTime": true,
+        "noCalendar": false,
+        "format": "dd-MM-yyyy HH:mm",
+        "hourIncrement": 1,
+        "minuteIncrement": 1,
+        "time_24hr": true,
+        "minDate": "moment(\"2022-01-01\")",
+        "disableWeekends": false,
+        "disableWeekdays": false,
+        "maxDate": null
+      }
+    },
+    {
+      "label": "Einddatum en tijd",
+      "useLocaleSettings": true,
+      "format": "dd-MM-yyyy HH:mm",
+      "tableView": false,
+      "enableMinDateInput": false,
+      "datePicker": {
+        "minDate": "moment(\"2022-01-01\")",
+        "disableWeekends": false,
+        "disableWeekdays": false
+      },
+      "enableMaxDateInput": false,
+      "timePicker": {
+        "showMeridian": false
+      },
+      "defaultValue": "2022-01-04T12:00:00+01:00",
+      "validate": {
+        "required": true,
+        "customMessage": "Dit veld is verplicht."
+      },
+      "key": "evenementaanvraag.evenementDatum.uitvoer.eind",
+      "logic": [
+        {
+          "name": "Altijd true",
+          "trigger": {
+            "type": "javascript",
+            "javascript": "result = true;"
+          },
+          "actions": [
+            {
+              "name": "Check of de default value gelijk is aan de huidige value van het component.",
+              "type": "customAction",
+              "customAction": "const defaultValue = instance.defaultValue;\nconst currentValue = instance.dataValue;\n\nif (defaultValue !== currentValue) {\n  data.evenementaanvraag.evenementWijzigingDatumOfLocatie.uitvoerEind = true;\n} else {\n  data.evenementaanvraag.evenementWijzigingDatumOfLocatie.uitvoerEind = false;\n}\n"
+            }
+          ]
+        }
+      ],
+      "type": "datetime",
+      "input": true,
+      "widget": {
+        "type": "calendar",
+        "displayInTimezone": "viewer",
+        "locale": "en",
+        "useLocaleSettings": true,
+        "allowInput": true,
+        "mode": "single",
+        "enableTime": true,
+        "noCalendar": false,
+        "format": "dd-MM-yyyy HH:mm",
+        "hourIncrement": 1,
+        "minuteIncrement": 1,
+        "time_24hr": true,
+        "minDate": "moment(\"2022-01-01\")",
+        "disableWeekends": false,
+        "disableWeekdays": false,
+        "maxDate": null
+      }
+    },
+    {
+      "label": "<strong>Eind afbouw</strong>",
+      "useLocaleSettings": true,
+      "format": "dd-MM-yyyy HH:mm",
+      "tableView": false,
+      "enableMinDateInput": false,
+      "datePicker": {
+        "minDate": "moment(\"2022-01-01\")",
+        "disableWeekends": false,
+        "disableWeekdays": false
+      },
+      "enableMaxDateInput": false,
+      "timePicker": {
+        "showMeridian": false
+      },
+      "defaultValue": "2022-03-03T13:00:00+01:00",
+      "validate": {
+        "required": true,
+        "customMessage": "Dit veld is verplicht."
+      },
+      "key": "evenementaanvraag.evenementDatum.afbouw.eind",
+      "logic": [
+        {
+          "name": "Altijd true",
+          "trigger": {
+            "type": "javascript",
+            "javascript": "result = true;"
+          },
+          "actions": [
+            {
+              "name": "Check of de default value gelijk is aan de huidige value van het component.",
+              "type": "customAction",
+              "customAction": "const defaultValue = instance.defaultValue;\nconst currentValue = instance.dataValue;\n\nif (defaultValue !== currentValue) {\n  data.evenementaanvraag.evenementWijzigingDatumOfLocatie.afbouw = true;\n} else {\n  data.evenementaanvraag.evenementWijzigingDatumOfLocatie.afbouw = false;\n}\n"
+            }
+          ]
+        }
+      ],
+      "type": "datetime",
+      "input": true,
+      "widget": {
+        "type": "calendar",
+        "displayInTimezone": "viewer",
+        "locale": "en",
+        "useLocaleSettings": true,
+        "allowInput": true,
+        "mode": "single",
+        "enableTime": true,
+        "noCalendar": false,
+        "format": "dd-MM-yyyy HH:mm",
+        "hourIncrement": 1,
+        "minuteIncrement": 1,
+        "time_24hr": true,
+        "minDate": "moment(\"2022-01-01\")",
+        "disableWeekends": false,
+        "disableWeekdays": false,
+        "maxDate": null
+      }
+    },
+    {
+      "label": "Waar vindt uw evenement plaats?",
+      "optionsLabelPosition": "right",
+      "tableView": false,
+      "defaultValue": {
+        "In één of meerdere gebouwen": true,
+        "Buiten op één of meer plaatsen": false,
+        "Op een route": false
+      },
+      "values": [
+        {
+          "label": "In één of meerdere gebouwen",
+          "value": "In één of meerdere gebouwen",
+          "shortcut": ""
+        },
+        {
+          "label": "Buiten op één of meer plaatsen",
+          "value": "Buiten op één of meer plaatsen",
+          "shortcut": ""
+        },
+        {
+          "label": "Op een route",
+          "value": "Op een route",
+          "shortcut": ""
+        }
+      ],
+      "validate": {
+        "required": true,
+        "customMessage": "Dit veld is verplicht."
+      },
+      "key": "evenementaanvraag.evenementLocatie",
+      "logic": [
+        {
+          "name": "Altijd true",
+          "trigger": {
+            "type": "javascript",
+            "javascript": "result = true;"
+          },
+          "actions": [
+            {
+              "name": "Check of de default value gelijk is aan de huidige value van het component.",
+              "type": "customAction",
+              "customAction": "const defaultValue = instance.defaultValue;\nconst currentValue = instance.dataValue;\n\nconsole.log(defaultValue)\nconsole.log(currentValue)\nif (defaultValue !== currentValue) {\n  data.evenementaanvraag.evenementWijzigingDatumOfLocatie.locatie = true;\n} else {\n  data.evenementaanvraag.evenementWijzigingDatumOfLocatie.locatie = false;\n}\n"
+            }
+          ]
+        }
+      ],
+      "type": "selectboxes",
+      "input": true,
+      "inputType": "checkbox"
+    },
+    {
+      "html": "<p>Teken of selecteer op de kaart uw locatie of route.<br>Dit is een indicatie een specifiekere tekening zal wanneer nodig in een later stadium worden opgevraagd.</p> <figure class=\"table\"><table><tbody><tr><td><span style=\"background-color:rgb(255,255,255);color:rgb(0,0,0);\"><strong>Knop</strong></span></td><td><span style=\"background-color:rgb(255,255,255);color:rgb(0,0,0);\"><strong>Gebruik</strong></span></td></tr><tr><td><strong>Teken Route</strong></td><td>Klik = Start en Dubbelklik = Eind en Esc = annuleer huidige tekening</td></tr><tr><td><strong>Teken terrein&nbsp; &nbsp;</strong></td><td>Klik = Start en Dubbelklik = Eind en Esc = annuleer huidige tekening</td></tr><tr><td><strong>Selecteer gebouw&nbsp; &nbsp;</strong></td><td>Klik = Gebouw selecteren en Klik geselecteerde gebouw = selectie ongedaan maken</td></tr><tr><td><strong>Kaart leegmaken&nbsp; &nbsp;</strong></td><td>Let op: de kaart wordt meteen leeggemaakt</td></tr></tbody></table> </figure>",
+      "label": "Content",
+      "refreshOnChange": false,
+      "key": "content",
+      "type": "content",
+      "input": false,
+      "tableView": false
+    },
+    {
+      "label": "Test",
+      "optionsLabelPosition": "right",
+      "inline": false,
+      "hidden": true,
+      "hideLabel": true,
+      "tableView": false,
+      "values": [
+        {
+          "label": "Ja",
+          "value": "true",
+          "shortcut": ""
+        },
+        {
+          "label": "Nee",
+          "value": "false",
+          "shortcut": ""
+        }
+      ],
+      "clearOnHide": false,
+      "key": "evenementaanvraag.evenementWijzigingDatumOfLocatie.opbouw",
+      "type": "radio",
+      "input": true,
+      "defaultValue": false
+    },
+    {
+      "label": "Evenement geannuleerd door wijziging datum of locatie",
+      "optionsLabelPosition": "right",
+      "inline": false,
+      "hidden": true,
+      "hideLabel": true,
+      "tableView": false,
+      "defaultValue": false,
+      "values": [
+        {
+          "label": "Ja",
+          "value": "true",
+          "shortcut": ""
+        },
+        {
+          "label": "Nee",
+          "value": "false",
+          "shortcut": ""
+        }
+      ],
+      "clearOnHide": false,
+      "calculateValue": "value = data.evenementaanvraag.evenementWijzigingDatumOfLocatie.opbouw || data.evenementaanvraag.evenementWijzigingDatumOfLocatie.uitvoerStart || data.evenementaanvraag.evenementWijzigingDatumOfLocatie.uitvoerEind || data.evenementaanvraag.evenementWijzigingDatumOfLocatie.afbouw || data.evenementaanvraag.evenementWijzigingDatumOfLocatie.locatie || data.evenementaanvraag.evenementWijzigingDatumOfLocatie.featureCollection ? true : false;",
+      "key": "evenementaanvraag.evenementGeannuleerdDoorWijzigingDatumOfLocatie",
+      "type": "radio",
+      "input": true
+    },
+    {
+      "label": "evenementWijzigingDatumOfLocatie",
+      "key": "evenementaanvraag.evenementWijzigingDatumOfLocatie",
+      "type": "hidden",
+      "input": true,
+      "tableView": false
+    }
+  ]
+}
